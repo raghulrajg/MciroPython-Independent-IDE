@@ -1,0 +1,9 @@
+{
+    "urls": [
+        [
+            "test/main.py",
+            "github:raghulrajg/MciroPython-Independent-IDE/test/main.py"
+        ]
+    ],
+    "version": "1.0.0"
+}
