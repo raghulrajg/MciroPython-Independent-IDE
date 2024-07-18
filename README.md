@@ -148,6 +148,7 @@ The purpose of the MicroPython web code editor is to eliminate the need for phys
 The editor has two buttons: 'Run' and 'Status'
 
 `Run`: This button uploads the program to the corresponding device and checks for syntax errors only. Once the program is uploaded, wait a few seconds until the device's onboard LED turns off.
+
 `Status`: This button checks for error logs. If the previously uploaded program has runtime errors, they will be notified here.
 
 ### Shortcut Keys
