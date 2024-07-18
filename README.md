@@ -152,4 +152,5 @@ The editor has two buttons: 'Run' and 'Status'
 
 ### Shortcut Keys
 `Ctrl+u`, `F4`: Upload the program.
+
 `F2`: Check for error logs.
