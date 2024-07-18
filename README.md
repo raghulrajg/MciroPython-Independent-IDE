@@ -73,7 +73,7 @@ To set up your development environment, follow these steps:
     ```sh
     ampy --port /dev/ttyUSB0 run main.py
     ```
-    
+
 ## Installation
 
 ### Installing with mip
@@ -136,3 +136,20 @@ To install in a virtual environment in your current project:
 ```
 
 Also see [examples](https://github.com/raghulrajg/MciroPython-Independent-IDE/tree/main/test).
+
+## Usage
+
+## Upload and Error check
+
+### MicroPython Web Code Editor
+The purpose of the MicroPython web code editor is to eliminate the need for physical IDE software. This web editor provides a high-speed program upload to the device and includes an inbuilt web server to host the MicroPython code editor webpage. It can handle uploading, debugging, and more.
+
+### Editor Options
+The editor has two buttons: 'Run' and 'Status'
+
+`Run`: This button uploads the program to the corresponding device and checks for syntax errors only. Once the program is uploaded, wait a few seconds until the device's onboard LED turns off.
+`Status`: This button checks for error logs. If the previously uploaded program has runtime errors, they will be notified here.
+
+### Shortcut Keys
+`Ctrl+u`, `F4`: Upload the program.
+`F2`: Check for error logs.
