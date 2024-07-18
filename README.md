@@ -21,12 +21,59 @@ The MicroPython Web Code Editor eliminates the need for physical IDE software by
 
 - [Features](#features)
 - [How It Looks](#how-it-looks)
+- [Setup Your Development Environment](#setup-your-development-environment)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Setup](#setup)
   - [Upload and Error check](#upload-and-error-check)
 - [Important Notes](#important-notes)
 
+## Setup Your Development Environment
+
+To set up your development environment, follow these steps:
+
+1. **Install MicroPython on Your Board:**
+
+    - Download the latest MicroPython firmware for your board from the [official MicroPython website](https://micropython.org/download/).
+    - Flash the firmware to your board using a tool like `esptool.py`:
+
+      ```sh
+      esptool.py --chip esp32 --port /dev/ttyUSB0 erase_flash
+      esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 esp32-20220117-v1.18.bin
+      ```
+
+      Replace `/dev/ttyUSB0` with the appropriate port for your system and `esp32-20220117-v1.18.bin` with the firmware file you downloaded.
+
+2. **Install `ampy`:**
+
+    `ampy` is a command-line tool to interact with a MicroPython board over a serial connection.
+
+    ```sh
+    pip install adafruit-ampy
+    ```
+
+3. **Connect to Your Board:**
+
+    Ensure your board is connected to your computer via a USB cable. Identify the serial port used by your board. On Unix-based systems (Linux/macOS), it might be something like `/dev/ttyUSB0`, and on Windows, it might be `COM3` or similar.
+
+4. **Upload Files to Your Board:**
+
+    Use `ampy` to upload files to your MicroPython board. For example, to upload a file named `main.py`:
+
+    ```sh
+    ampy --port /dev/ttyUSB0 put main.py
+    ```
+
+    Replace `/dev/ttyUSB0` with the appropriate serial port for your setup.
+
+5. **Run Scripts on Your Board:**
+
+    To run a script directly on your MicroPython board, use the `run` command:
+
+    ```sh
+    ampy --port /dev/ttyUSB0 run main.py
+    ```
+    
 ## Installation
 
 ### Installing with mip
